@@ -4,10 +4,6 @@ venv/
 # Dataset (too large for GitHub)
 data/
 
-# Model files
-*.h5
-*.tflite
-
 # Python
 __pycache__/
 *.pyc
