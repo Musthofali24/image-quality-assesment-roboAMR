@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -o data.zip -d .)",
+      "Bash(python3 -c \"import zipfile; z = zipfile.ZipFile\\('data.zip'\\); z.extractall\\('.'\\); print\\('Done'\\)\")",
+      "Bash(python3 -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(nvidia-smi)",
+      "Bash(python3 -c \"import tensorflow as tf; print\\('TF version:', tf.__version__\\); print\\('GPUs:', tf.config.list_physical_devices\\('GPU'\\)\\)\")",
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m pip --version)",
+      "Read(//opt/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(find /usr /opt /home /root -name \"python3*\" -o -name \"conda\" -o -name \"pip*\" 2>/dev/null | grep -v \".pyc\" | head -20 *)",
+      "Read(//usr/**)",
+      "Read(//usr/bin/**)",
+      "Bash(apt-get install *)",
+      "Bash(sudo apt-get install -y python3-pip)",
+      "Bash(python3 -m pip install \"tensorflow[and-cuda]==2.21.0\" numpy matplotlib seaborn scikit-learn jupyter)",
+      "Bash(PATH=/home/almus/.local/bin:__TRACKED_VAR__ python3 -c 'import tensorflow as tf; print\\('\\\\''TF:'\\\\'', tf.__version__\\); gpus = tf.config.list_physical_devices\\('\\\\''GPU'\\\\''\\); print\\('\\\\''GPUs:'\\\\'', gpus\\)')",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
